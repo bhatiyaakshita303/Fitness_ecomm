@@ -132,5 +132,5 @@ Here is a brief overview of the REST API design handled by the backend:
 ---
 
 <div align="center">
-  <p><b>Built with ❤️ as a portfolio showcase project.</b></p>
+  <p><b>Built with ❤️ by Akshita Bhatiya</b></p>
 </div>
