@@ -1,0 +1,109 @@
+.registration-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registration-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   
+    background: url("./img/regback.jpg");
+    background-size: cover;
+    color: white;
+    padding: 30px 15px;  
+}
+
+.registration-page .container {
+    max-width: 400px;     
+    width: 90%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;   
+    border-radius: 10px;
+}
+
+.registration-page .container .title {
+    font-size: 22px;      
+    font-weight: 600;
+    position: relative;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.registration-page .container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 40px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.registration-page form .user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;            
+}
+
+.registration-page form .input-box2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-page form .input-box2 .details {
+    font-size: 14px;     
+    font-weight: 500;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.registration-page form .input-box2 input {
+    height: 35px;        
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;    
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.registration-page form .input-box2 input:focus {
+    border-color: #9b59b6;
+}
+
+.registration-page form .regbtn {
+    margin: 15px 0;
+}
+
+.registration-page form .regbtn input {
+    height: 38px;         
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #D2C1B6;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-page form .regbtn input:hover {
+    background-color: #F0E4D3;
+}
+
+.registration-page .option {
+    text-align: center;
+    font-size: 14px;      
+    margin-top: 5px;
+}
+
+.registration-page .option a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.registration-page .option a:hover {
+    text-decoration: underline;
+}

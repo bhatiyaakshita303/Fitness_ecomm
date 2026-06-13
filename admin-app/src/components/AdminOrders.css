@@ -1,0 +1,167 @@
+.adminorders-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.adminorders-header .logo {
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+    filter: drop-shadow(0 0 10px #ff0000);
+}
+
+.adminorders-nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.adminorders-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .2s;
+}
+
+.adminorders-nav a:hover:after {
+    transform: scaleX(1);
+}
+
+.admin-orders-page {
+    background-color: #6b8695;
+    color: #fff;
+    min-height: 100vh;
+    padding: 80px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.admin-orders-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.admin-orders-page .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #444040;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-orders-page .orders-table th,
+.admin-orders-page .orders-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-orders-page .orders-table th {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.admin-orders-page .orders-table tr:hover {
+    background-color: #625c5c;
+}
+
+.admin-orders-page .no-orders {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.admin-orders-page .status {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.admin-orders-page .status.pending {
+    color: orange;
+}
+
+.admin-orders-page .status.approved {
+    color: green;
+}
+
+.admin-orders-page .status.rejected {
+    color: red;
+}
+
+.admin-orders-page .approve-btn {
+    background: #988b8b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.admin-orders-page .reject-btn {
+    background: #988b8b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.admin-orders-page .order-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 25px 0 30px 0;
+}
+
+.admin-orders-page .order-filters button {
+  padding: 10px 22px;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.admin-orders-page .order-filters button:hover {
+  background: #222;
+}
+
+.admin-orders-page .order-filters button.active {
+  box-shadow: 0 0 8px rgba(255,255,255,0.15);
+}
+
+/* active colors */
+.admin-orders-page .order-filters .pending.active {
+  background: #ff9800;
+  border-color: #ff9800;
+}
+
+.admin-orders-page .order-filters .approved.active {
+  background: #00c853;
+  border-color: #00c853;
+}
+
+.admin-orders-page .order-filters .rejected.active {
+  background: #ff1744;
+  border-color: #ff1744;
+}

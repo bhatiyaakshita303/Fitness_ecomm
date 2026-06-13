@@ -1,0 +1,134 @@
+.membership-page {
+    min-height: 100vh;
+    background: #6b8695;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.membership-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.membership-header .logo {
+    font-size: 1.7em;
+    color: #fff;
+    text-decoration: none;
+    filter: drop-shadow(0 0 10px #ff0000);
+}
+
+.membership-page .admin-nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.membership-page.admin-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .2s;
+}
+
+.membership-page .admin-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.membership-page h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* ===== FORM ===== */
+.membership-page form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px auto;
+    margin-bottom: 30px;
+    max-width: 600px;
+    backdrop-filter: blur(6px);
+}
+
+.membership-page form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: none;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+.membership-page form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background: #1c1c1c;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.membership-page form button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.membership-page table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.membership-page thead {
+    background: #1c1c1c;
+    color: white;
+}
+
+.membership-page th,
+td {
+    padding: 14px;
+    text-align: center;
+}
+
+.membership-page tbody tr {
+    background: #e0e0e0;
+    transition: 0.25s;
+}
+
+.membership-page tbody tr:hover {
+    background: #625c5c;
+    color: white;
+}
+
+.membership-page td button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4d4d;
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
