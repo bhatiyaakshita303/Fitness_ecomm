@@ -5,6 +5,7 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const Razorpay = require("razorpay");
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
