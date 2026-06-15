@@ -17,7 +17,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ===== DATABASE CONNECTION =====
 mongoose
-  .connect("mongodb://127.0.0.1:27017/fitnessDB")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error(" MongoDB connection error:", err));
 
