@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import img1 from "./img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./MembershipPlan.css";
 
 function MembershipPlan() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -99,19 +105,23 @@ function MembershipPlan() {
           <img src={img1} alt="logo" /> FlexZone
         </a>
 
-        <nav className="admin-nav">
-          <Link to="/admindash">Dashboard</Link>
-          <Link to="/admindash/aproducts">Products</Link>
-          <Link to="/admindash/membershipplan">MembershipPlan</Link>
-          <Link to="/admindash/user">Users</Link>
-          <Link to="/admindash/adminorders">Orders</Link>
-          <a href="#" onClick={handleLogout} className="logout-link">
+        <div className="menu-icon" onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes size={24} color="white" /> : <FaBars size={24} color="white" />}
+        </div>
+
+        <nav className={`admin-nav ${isMenuOpen ? "active" : ""}`}>
+          <Link to="/admindash" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
+          <Link to="/admindash/aproducts" onClick={() => setIsMenuOpen(false)}>Products</Link>
+          <Link to="/admindash/membershipplan" onClick={() => setIsMenuOpen(false)}>MembershipPlan</Link>
+          <Link to="/admindash/user" onClick={() => setIsMenuOpen(false)}>Users</Link>
+          <Link to="/admindash/adminorders" onClick={() => setIsMenuOpen(false)}>Orders</Link>
+          <a href="#" onClick={(e) => { setIsMenuOpen(false); handleLogout(e); }} className="logout-link">
             Logout
           </a>
         </nav>
       </header>
 
-      <div style={{ padding: 90 }}>
+      <div className="membership-content">
         <h2>Manage Membership Packages</h2>
 
         <form onSubmit={handleSubmit}>

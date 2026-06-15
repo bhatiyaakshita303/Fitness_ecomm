@@ -108,3 +108,19 @@
 .registration-page .option a:hover {
   text-decoration: underline;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .registration-page .login {
+    flex-direction: column;
+    padding: 20px 20px 0;
+    justify-content: flex-start;
+  }
+  .registration-page .content h2 {
+    font-size: 2em;
+  }
+  .registration-page .wrapper-login {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

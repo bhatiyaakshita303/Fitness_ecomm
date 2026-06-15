@@ -166,3 +166,69 @@
 .products-container .product-table button:first-child {
     background: #00c8ff;
 }
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .products-container .product-header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 20px;
+      align-items: center;
+      background: #000;
+    }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .products-container .admin-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: #111;
+      padding: 20px 0;
+      text-align: center;
+      z-index: 100;
+    }
+    .products-container .admin-nav.active {
+      display: flex;
+    }
+    .products-container .admin-nav a {
+      margin: 10px 0;
+      font-size: 1.2em;
+      display: block;
+    }
+
+    .products-container .product-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .products-container {
+        padding-top: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .products-container .product-form {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .products-container .product-table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .products-container .product-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+}

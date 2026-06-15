@@ -129,3 +129,24 @@
 .login-page .register-link p a:hover {
     text-decoration: underline;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .login-page .login {
+    flex-direction: column;
+    padding: 20px 20px 0;
+    justify-content: flex-start;
+  }
+  .login-page .content h2 {
+    font-size: 2em;
+  }
+  .login-page .wrapper-login {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .login-page .member {
+    margin-left: 0;
+    text-align: center;
+    display: block;
+  }
+}

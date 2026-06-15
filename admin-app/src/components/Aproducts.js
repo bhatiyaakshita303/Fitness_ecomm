@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import img1 from "./img/logo.png";
 import "./Aproducts.css";
 
 function Aproducts() {
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = (e) => {
         e.preventDefault();
         localStorage.removeItem("role");
         navigate("/login");
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
     const [products, setProducts] = useState([]);
     const [formData, setFormData] = useState({ productName: "", price: "" });
@@ -90,13 +96,18 @@ function Aproducts() {
                 <a href="#" className="logo">
                     <img src={img1} alt="logo" /> FlexZone
                 </a>
-                <nav className="admin-nav">
-                    <Link to="/admindash">Dashboard</Link>
-                    <Link to="/admindash/aproducts">Products</Link>
-                    <Link to="/admindash/membershipplan">MembershipPlan</Link>
-                    <Link to="/admindash/user">Users</Link>
-                    <Link to="/admindash/adminorders">Orders</Link>
-                    <a href="#" onClick={handleLogout} className="logout-link">Logout</a>
+
+                <div className="menu-icon" onClick={toggleMenu}>
+                    {isMenuOpen ? <FaTimes size={24} color="white" /> : <FaBars size={24} color="white" />}
+                </div>
+
+                <nav className={`admin-nav ${isMenuOpen ? "active" : ""}`}>
+                    <Link to="/admindash" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
+                    <Link to="/admindash/aproducts" onClick={() => setIsMenuOpen(false)}>Products</Link>
+                    <Link to="/admindash/membershipplan" onClick={() => setIsMenuOpen(false)}>MembershipPlan</Link>
+                    <Link to="/admindash/user" onClick={() => setIsMenuOpen(false)}>Users</Link>
+                    <Link to="/admindash/adminorders" onClick={() => setIsMenuOpen(false)}>Orders</Link>
+                    <a href="#" onClick={(e) => { setIsMenuOpen(false); handleLogout(e); }} className="logout-link">Logout</a>
                 </nav>
             </header>
 

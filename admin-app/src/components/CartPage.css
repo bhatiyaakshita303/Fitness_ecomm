@@ -122,3 +122,19 @@
 .cart-page .view-order-btn:hover {
   background-color: #ffaa00;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .cart-page {
+    padding: 80px 10px;
+  }
+  .cart-page .cart-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .cart-page .cart-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

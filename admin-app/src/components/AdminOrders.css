@@ -165,3 +165,68 @@
   background: #ff1744;
   border-color: #ff1744;
 }
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .admin-orders-page .adminorders-header {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 20px;
+      align-items: center;
+      background: #000;
+    }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .admin-orders-page .admin-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: #111;
+      padding: 20px 0;
+      text-align: center;
+      z-index: 100;
+    }
+    .admin-orders-page .admin-nav.active {
+      display: flex;
+    }
+    .admin-orders-page .admin-nav a {
+      margin: 10px 0;
+      font-size: 1.2em;
+      display: block;
+    }
+
+    .admin-orders-page .order-filters {
+        flex-direction: column;
+    }
+    
+    .admin-orders-page .order-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+    
+    .admin-orders-page {
+        padding: 80px 10px;
+    }
+    .admin-orders-page .orders-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .admin-orders-page .order-filters {
+        flex-wrap: wrap;
+    }
+}

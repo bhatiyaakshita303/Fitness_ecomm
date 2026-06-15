@@ -41,7 +41,11 @@ function ProductDetail() {
 
   return (
     <div className="product-detail">
-      <img src={`http://localhost:5000${product.image}`} alt={product.productName} width="360" />
+      <img
+        src={`http://localhost:5000${product.image}`}
+        alt={product.productName}
+        className="product-detail-img"
+      />
       <h2>{product.productName}</h2>
       <p>Track your progress with this high-performance flexzone tracker.</p>
       <h4>₹{product.price}</h4>
