@@ -12,7 +12,7 @@ function ProductDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${id}`)
+      .get(`https://fitness-ecomm.onrender.com/api/products/${id}`)
       .then((res) => setProduct(res.data))
       .catch((err) => console.error("Error loading product:", err));
   }, [id]);
@@ -32,7 +32,7 @@ function ProductDetail() {
       id: product._id,
       name: product.productName,
       price: product.price,
-      img: `http://localhost:5000${product.image}`,
+      img: `https://fitness-ecomm.onrender.com${product.image}`,
       qty: 1,
     });
 
@@ -42,7 +42,7 @@ function ProductDetail() {
   return (
     <div className="product-detail">
       <img
-        src={`http://localhost:5000${product.image}`}
+        src={`https://fitness-ecomm.onrender.com${product.image}`}
         alt={product.productName}
         className="product-detail-img"
       />

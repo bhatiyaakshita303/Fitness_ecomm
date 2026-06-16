@@ -8,7 +8,7 @@ function About() {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get("http://localhost:5000/api/plans")
+        axios.get("https://fitness-ecomm.onrender.com/api/plans")
             .then(res => setPlans(res.data));
     }, []);
     useEffect(() => {
@@ -23,7 +23,7 @@ function About() {
 
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/purchase-membership",
+                "https://fitness-ecomm.onrender.com/api/purchase-membership",
                 {
                     userId: user._id,
                     planId: planId

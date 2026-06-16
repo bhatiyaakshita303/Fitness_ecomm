@@ -15,7 +15,7 @@ function MyOrders() {
     }
 
     axios
-      .get(`http://localhost:5000/api/orders/${userId}`)
+      .get(`https://fitness-ecomm.onrender.com/api/orders/${userId}`)
       .then((res) => {
         setOrders(res.data);
 

@@ -11,7 +11,7 @@ function Membership() {
 
   // Fetch membership plans
   useEffect(() => {
-    axios.get("http://localhost:5000/api/plans")
+    axios.get("https://fitness-ecomm.onrender.com/api/plans")
       .then(res => setPlans(res.data))
       .catch(err => console.log(err));
   }, []);

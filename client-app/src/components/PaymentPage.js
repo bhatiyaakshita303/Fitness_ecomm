@@ -8,7 +8,7 @@ function PaymentPage() {
     const amount = 500;
 
     const res = await axios.post(
-      "http://localhost:5000/api/create-order",
+      "https://fitness-ecomm.onrender.com/api/create-order",
       { amount }
     );
 

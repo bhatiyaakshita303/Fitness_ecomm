@@ -9,7 +9,7 @@ function Gallery() {
 
   // Fetch products
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
+    axios.get("https://fitness-ecomm.onrender.com/api/products")
       .then(res => setProducts(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -53,7 +53,7 @@ function Gallery() {
       <div className="gallery-grid" id="products">
         {products.map((product) => (
           <div key={product._id} className="gallery-card">
-            <img src={`http://localhost:5000${product.image}`} alt={product.productName} />
+            <img src={`https://fitness-ecomm.onrender.com${product.image}`} alt={product.productName} />
             <h3>{product.productName}</h3>
             <p>₹{product.price}</p>
             <button className="buy-btn" onClick={() => handleBuy(product._id)}>

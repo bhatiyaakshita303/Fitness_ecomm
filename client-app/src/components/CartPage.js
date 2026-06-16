@@ -24,7 +24,7 @@
 //     }
 
 //     try {
-//       await axios.post("http://localhost:5000/api/fake-payment", {
+//       await axios.post("https://fitness-ecomm.onrender.com/api/fake-payment", {
 //         userId: user._id,   // important fix
 //         products: cart.map(item => ({
 //           name: item.name,
@@ -157,7 +157,7 @@ function CartPage() {
       // ================= COD =================
       if (paymentMethod === "COD") {
 
-        await axios.post("http://localhost:5000/api/orders", {
+        await axios.post("https://fitness-ecomm.onrender.com/api/orders", {
           userId: user._id,
           products: cart,
           total: total,
@@ -175,7 +175,7 @@ function CartPage() {
       if (paymentMethod === "ONLINE") {
 
         const res = await axios.post(
-          "http://localhost:5000/api/create-order",
+          "https://fitness-ecomm.onrender.com/api/create-order",
           { amount: total }
         );
 
@@ -191,7 +191,7 @@ function CartPage() {
 
           handler: async function () {
 
-            await axios.post("http://localhost:5000/api/orders", {
+            await axios.post("https://fitness-ecomm.onrender.com/api/orders", {
               userId: user._id,
               products: cart,
               total: total,
