@@ -17,7 +17,7 @@ function CartPage() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/orders", {
+      const res = await axios.post("https://fitness-ecomm.onrender.com/api/orders", {
         userId,
         products: cart.map((item) => ({
           productId: item.id,

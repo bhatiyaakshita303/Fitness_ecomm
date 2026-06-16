@@ -22,7 +22,7 @@ function Users() {
     // Fetch users
     const fetchUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/users");
+            const res = await axios.get("https://fitness-ecomm.onrender.com/api/users");
             setUsers(res.data);
         } catch (err) {
             console.error(err);
@@ -37,7 +37,7 @@ function Users() {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
             try {
-                await axios.delete(`http://localhost:5000/api/users/${id}`);
+                await axios.delete(`https://fitness-ecomm.onrender.com/api/users/${id}`);
                 fetchUsers();
             } catch (err) {
                 console.error(err);

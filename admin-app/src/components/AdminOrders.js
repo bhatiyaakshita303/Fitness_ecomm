@@ -23,7 +23,7 @@ function AdminOrders() {
     const fetchOrders = async () => {
         try {
             const res = await axios.get(
-                `http://localhost:5000/api/admin/orders/${filter}`
+                `https://fitness-ecomm.onrender.com/api/admin/orders/${filter}`
             );
             setOrders(res.data);
         } catch (err) {
@@ -40,7 +40,7 @@ function AdminOrders() {
     const approveOrder = async (orderId) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/admin/orders/${orderId}/approve`
+                `https://fitness-ecomm.onrender.com/api/admin/orders/${orderId}/approve`
             );
             fetchOrders();
         } catch (err) {
@@ -53,7 +53,7 @@ function AdminOrders() {
     const rejectOrder = async (orderId) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/admin/orders/${orderId}/reject`
+                `https://fitness-ecomm.onrender.com/api/admin/orders/${orderId}/reject`
             );
             fetchOrders();
         } catch (err) {

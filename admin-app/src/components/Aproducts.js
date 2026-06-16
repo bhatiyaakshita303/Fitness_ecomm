@@ -26,7 +26,7 @@ function Aproducts() {
     // Fetch products
     const fetchProducts = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/api/products");
+            const res = await axios.get("https://fitness-ecomm.onrender.com/api/products");
             setProducts(res.data);
         } catch (err) {
             console.error("Error fetching products:", err);
@@ -56,11 +56,11 @@ function Aproducts() {
             if (imageFile) data.append("image", imageFile);
 
             if (editingId) {
-                await axios.put(`http://localhost:5000/api/products/${editingId}`, data, {
+                await axios.put(`https://fitness-ecomm.onrender.com/api/products/${editingId}`, data, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
             } else {
-                await axios.post("http://localhost:5000/api/products", data, {
+                await axios.post("https://fitness-ecomm.onrender.com/api/products", data, {
                     headers: { "Content-Type": "multipart/form-data" },
                 });
             }
@@ -83,7 +83,7 @@ function Aproducts() {
     // Delete product
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/${id}`);
+            await axios.delete(`https://fitness-ecomm.onrender.com/api/products/${id}`);
             fetchProducts();
         } catch (err) {
             console.error("Error deleting product:", err);
@@ -153,7 +153,7 @@ function Aproducts() {
                                     <td>
                                         {p.image ? (
                                             <img
-                                                src={`http://localhost:5000${p.image}`}
+                                                src={`https://fitness-ecomm.onrender.com${p.image}`}
                                                 alt={p.productName}
                                                 className="table-img"
                                             />

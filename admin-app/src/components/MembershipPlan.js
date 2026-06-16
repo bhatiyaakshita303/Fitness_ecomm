@@ -30,7 +30,7 @@ function MembershipPlan() {
   });
 
   const fetchPlans = () => {
-    axios.get("http://localhost:5000/api/plans")
+    axios.get("https://fitness-ecomm.onrender.com/api/plans")
       .then(res => setPlans(res.data))
       .catch(err => console.error(err));
   };
@@ -45,7 +45,7 @@ function MembershipPlan() {
     try {
       if (editingId) {
         // UPDATE PLAN
-        await axios.put(`http://localhost:5000/api/plans/${editingId}`, {
+        await axios.put(`https://fitness-ecomm.onrender.com/api/plans/${editingId}`, {
           club: form.club,
           planName: form.planName,
           duration: form.duration,
@@ -57,7 +57,7 @@ function MembershipPlan() {
 
       } else {
         // ADD PLAN
-        await axios.post("http://localhost:5000/api/plans", {
+        await axios.post("https://fitness-ecomm.onrender.com/api/plans", {
           club: form.club,
           planName: form.planName,
           duration: form.duration,
@@ -94,7 +94,7 @@ function MembershipPlan() {
   };
 
   const deletePlan = async (id) => {
-    await axios.delete(`http://localhost:5000/api/plans/${id}`);
+    await axios.delete(`https://fitness-ecomm.onrender.com/api/plans/${id}`);
     fetchPlans();
   };
 
