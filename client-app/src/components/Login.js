@@ -55,7 +55,6 @@ function Login() {
             “Every move matters. With our easy-to-use flexzone tracker, you can
             see your daily progress and push yourself to be your best.”
           </p>
-          <a href="#">Get Started</a>
         </div>
 
         <form className="logform" onSubmit={handleSubmit}>
